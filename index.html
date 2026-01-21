@@ -252,6 +252,30 @@ box-shadow:0 0 15px rgba(241,196,15,.8)
 </div>
 </div>
 
+<!-- ROADMAP -->
+<div class="section">
+<h2>🛣 Future Goals Roadmap</h2>
+<div class="timeline">
+<div class="card">🎯 2024 - Improve coding skills (HTML, CSS, JS)</div>
+<div class="card">💻 2025 - Build personal projects & portfolios</div>
+<div class="card">🏫 2026 - Graduate from Senior High School</div>
+<div class="card">🎓 2027 - Enter university (Engineering major)</div>
+<div class="card">🚀 2030 - Work as a professional software engineer</div>
+</div>
+</div>
+
+<!-- QUOTES -->
+<div class="section">
+<h2>💬 Favorite Quotes</h2>
+<div class="card" id="quoteBox">"Dream big, start small, act now."</div>
+</div>
+
+<!-- MOTIVATION -->
+<div class="section">
+<h2>💡 Personal Motto</h2>
+<div class="card">"Success is built from small consistent efforts every day. I believe in learning from failure, staying curious, and never giving up on my goals."</div>
+</div>
+
 <!-- CERTIFICATES -->
 <div class="section">
 <h2>🏆 Certificates & Positions</h2>
@@ -281,6 +305,27 @@ if(i>text.length)i=0
 },200)
 
 function darkMode(){document.body.classList.toggle('dark')}
+
+/* QUOTES CAROUSEL */
+const quotes=[
+"Dream big, start small, act now.",
+"Hard work beats talent when talent doesn't work hard.",
+"Success is the sum of small efforts repeated daily.",
+"Stay hungry, stay foolish.",
+"Your future is created by what you do today, not tomorrow."
+];
+
+let qIndex=0;
+setInterval(()=>{
+const box=document.getElementById('quoteBox');
+box.style.opacity=0;
+setTimeout(()=>{
+box.innerText='"'+quotes[qIndex]+'"';
+box.style.opacity=1;
+qIndex++;
+if(qIndex>=quotes.length)qIndex=0;
+},500);
+},4000);
 </script>
 
 </body>
